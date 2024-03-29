@@ -27,4 +27,4 @@ async def hello(interaction: discord.Interaction, user: str):
     json_data = data.json()
     await interaction.response.send_message(f"{user} {json_data['insult']}", ephemeral=True)  # Correct indentation
 
-bot.run('MTIxNDk1NTIwOTAzODQ5NTgwNw.GxHnhD.h7M58O42CgCEZa3O4BJ8AhoG9KBowOTkrtTbek')
+bot.run('MTIxNDk1NTIwOTAzODQ5NTgwNw.G0sLO6.FW3y7KLxAHztUBVjJXaq6kdqzSuvOWZFUqpYDo')
