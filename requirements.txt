@@ -1,7 +1,7 @@
 aiohttp==3.7
 decorator==4.4.2
 discord-typings==0.7.0
-discord.py==1.7.3
+discord.py==2.3.2
 discord.ui==5.1.6
 emoji==2.10.1
 httplib2==0.22.0
