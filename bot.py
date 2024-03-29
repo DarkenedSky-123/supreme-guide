@@ -5,7 +5,7 @@ import requests
 import asyncio
 
 intents = discord.Intents.default()
-intents.message_content = True  # Explicitly enable message_content intent
+intents.message_content = True  # Now works with newer versions
 
 bot = commands.Bot(command_prefix="/", intents=intents)
 
