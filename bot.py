@@ -4,7 +4,6 @@ from discord.ext import commands
 from discord_ui import Button
 import requests
 import asyncio
-from discord import Interaction
 bot = commands.Bot(command_prefix="/", intents = discord.Intents.all())
 
 
