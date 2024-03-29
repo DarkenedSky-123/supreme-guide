@@ -3,7 +3,8 @@ import discord
 from discord.ext import commands
 import requests
 import asyncio
-
+import os
+print(os.environ['API_KEY'])
 intents = discord.Intents.default()
 intents.message_content = True  # Now works with newer versions
 
@@ -27,4 +28,4 @@ async def hello(interaction: discord.Interaction, user: str):
     json_data = data.json()
     await interaction.response.send_message(f"{user} {json_data['insult']}", ephemeral=True)  # Correct indentation
 
-bot.run('MTIxNDk1NTIwOTAzODQ5NTgwNw.G0sLO6.FW3y7KLxAHztUBVjJXaq6kdqzSuvOWZFUqpYDo')
+bot.run(os.environ['API_KEY'])
