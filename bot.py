@@ -1,7 +1,7 @@
 import random
 import discord
 from discord.ext import commands
-from discord.ui import View , Button
+from discord_ui import View , Button
 import requests
 import asyncio
 from discord import Interaction
