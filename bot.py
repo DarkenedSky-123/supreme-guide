@@ -32,7 +32,7 @@ async def hello(interaction: discord.Interaction, user: str):
 async def avatar(interaction: discord.Interaction, user: discord.Member = None):
     user = user or interaction.author
     avatar_url = user.avatar.url
-    embed = discord.Embed(color=discord.Color.colour(0X4E96D5))
+    embed = discord.Embed(color=0X4E96D5)
     embed.set_author(name=user.display_name,icon_url=avatar_url)
     await interaction.response.send_message(embed=embed)
 
