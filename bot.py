@@ -27,10 +27,14 @@ async def hello(interaction: discord.Interaction, user: str):
     data = requests.get(url)
     json_data = data.json()
     await interaction.response.send_message(f"{user} {json_data['insult']}", ephemeral=True)  # Correct indentation
-@bot.command(name="avatar", description="This command sends the user's avatar.")
-async def avatar(ctx, user: discord.Member = None):
-    user = user or ctx.author
-    avatar_url = user.avatar_url
+
+@bot.tree.command(name="avatar", description="This command sends the user's avatar.")
+async def avatar(interaction: discord.Interaction, user: discord.Member = None):
+    user = user or interaction.author
+    avatar_url = user.avatar.url
+    embed = discord.Embed(color=discord.Color.colour(0X4E96D5))
+    embed.set_author(name=user.display_name,icon_url=avatar_url)
+    await interaction.response.send_message(embed=embed)
 
     await ctx.send(f"Here is the avatar of {user.display_name}: {avatar_url}")
 bot.run(os.environ['API_KEY'])
