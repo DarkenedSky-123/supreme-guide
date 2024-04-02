@@ -36,5 +36,4 @@ async def avatar(interaction: discord.Interaction, user: discord.Member = None):
     embed.set_author(name=user.display_name,icon_url=avatar_url)
     await interaction.response.send_message(embed=embed)
 
-    await ctx.send(f"Here is the avatar of {user.display_name}: {avatar_url}")
 bot.run(os.environ['API_KEY'])
